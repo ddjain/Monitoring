@@ -1,0 +1,24 @@
+global:
+  resolve_timeout: 10s
+
+route:
+  receiver: 'team-X-slack'
+
+receivers:
+  - name: 'team-X-slack'
+    slack_configs:
+      - api_url: 'SLACK_WEBHOOK_URL'
+        channel: '#promethus'
+        title: "Fix Title"
+        text: |
+          {{ .CommonAnnotations.summery}}
+          {{ .CommonAnnotations.description }}
+        send_resolved: true
+
+
+#
+# Optional: Group alerts to reduce alert noise
+#group_by: ['alertname', 'job']
+#group_wait: 30s
+#group_interval: 5m
+#repeat_interval: 3h

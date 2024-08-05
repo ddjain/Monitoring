@@ -1,0 +1,25 @@
+groups:
+  - name: application-alerts
+    rules:
+      - alert: InstanceDown
+        expr: up{job="spring-boot-app"} == 0
+        for: 5s
+        labels:
+          severity: critical
+          job: "{{ $labels.job }}"
+        annotations:
+          title: "Service Down"
+          summary: "Instance is down"
+          description: "Instance is not reachable"
+      - alert: UnprocessedQueueMessage
+        expr: rabbitmq_queue_messages{job="rabbitmq"} > 2
+        for: 5s
+        labels:
+          severity: critical
+          job: "{{ $labels.job }}"
+        annotations:
+          title: "RabbitMQ Error"
+          summary: "There are some unprocessed messages in the queue."
+          description: "Issue while processing the message in the queue"
+
+#

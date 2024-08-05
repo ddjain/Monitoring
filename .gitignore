@@ -1,0 +1,90 @@
+# Java build output directories
+target/
+out/
+
+# Intellij IDEA
+*.iml
+.idea/
+*.iws
+*.ipr
+out/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Eclipse
+*.classpath
+*.project
+*.settings/
+.apt_generated/
+.jee_generated/
+target/
+
+# Maven
+log/
+logfile.txt
+*.log
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+target/
+dependency-reduced-pom.xml
+
+# Gradle
+.gradle/
+build/
+
+# Logs
+*.log
+logs/
+logfile.txt
+
+# Environment variables
+.env
+
+# Spring Boot
+*.jar
+*.war
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~ 
+
+# System-specific
+Thumbs.db
+.DS_Store
+
+# Coverage reports
+coverage/
+*.lcov
+
+# IDE-specific directories
+.idea/
+*.iml
+*.ipr
+*.iws
+*.sublime*
+
+# Other
+node_modules/
